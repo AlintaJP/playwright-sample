@@ -10,7 +10,7 @@ exports.formsTest = base.test.extend({
     dateOfBirth: '02 July 1995',
     subjectsInput: 'Maths',
     hobbies: 'Sports',
-    currentAddress: '123 Test Street',
+    currentAddress: '12345 Test Street',
     state: 'NCR',
     city: 'Delhi',
   },
