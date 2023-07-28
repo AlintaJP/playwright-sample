@@ -1,0 +1,23 @@
+{
+  "name": "playwright-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate_allure": "npx allure generate ./allure-results/ --clean",
+    "bdd": "npx cucumber-js --exit",
+    "bdd_e2e": "npm run bdd",
+    "bdd_validation": "npm run bdd --tags '@Validation'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2",
+    "allure-commandline": "^2.23.1",
+    "allure-playwright": "^2.4.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^9.3.0"
+  }
+}
