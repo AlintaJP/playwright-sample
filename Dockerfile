@@ -1,6 +1,9 @@
-FROM jenkins/agent:alpine-jdk11
+FROM jenkins/agent:jdk11
 USER root
-RUN apk add --update curl && \
-    rm -rf /var/cache/apk/*
-RUN apk add --update nodejs npm
+RUN apt-get update && \
+    apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs
+RUN npm install -g playwright && \
+    npx playwright install-deps
 USER jenkins
