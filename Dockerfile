@@ -5,5 +5,5 @@ RUN apt-get update && \
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs
 RUN npx playwright install-deps
-RUN npx playwright install
 USER jenkins
+RUN npx playwright install
